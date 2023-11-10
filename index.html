@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <!-- ================= css file ================ -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <section>
+            <div class="title">
+                <h1>CRUDS</h1>
+                <p>CREATE READ UDAPTE DELETE SEARCH</p>
+            </div>
+            <div class="inputs">
+                <input type="text" id="title" placeholder="Title">
+                <div class="row_input">
+                    <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                    <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                    <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                    <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                    <div onkeyup="getTotal()" id="total"></div>
+                </div>
+                <input type="number" id="count" placeholder="count">
+                <input type="text" id="category" placeholder="category">
+                <button id="submit">Create</button>
+            </div>
+            <div class="output">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
+                <div class="row_btn">
+                    <button onclick="searchMood(this.id)" id="searchTitle">search by Title</button>
+                    <button onclick="searchMood(this.id)" id="searchCategorey">search by Categorey</button>
+                </div>
+                <div id="DeleteAll">
+
+                </div>
+                <table>
+                    <tr>
+                        <td>id</td>
+                        <td>title</td>
+                        <td>price</td>
+                        <td>taxes</td>
+                        <td>ads</td>
+                        <td>discount</td>
+                        <td>total</td>
+                        <td>category</td>
+                        <td>UDAPTE</td>
+                        <td>DELETE</td>
+                    </tr>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    <!-- ================= js file ================ -->
+    <script src="main.js"></script>
+</body>
+</html>

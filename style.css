@@ -1,0 +1,125 @@
+/* ===================== FONT LINK ================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #222;   
+}
+/* ===================== COMMUN PROPRITIES  ================== */
+section{
+    padding: 0 4rem;
+    width: 100%;
+}
+input{
+    background-color: #100;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8REM 1.3rem;
+    color: #f5f0f0;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: .5s;
+}
+input::placeholder{
+    font-size: 1rem;
+    font-weight: bold;
+}
+input:hover,
+input:focus{
+    transform: scale(1.03);
+}
+button{
+    background-color: #8200ad;
+    border: none;
+    border-radius: 23px;
+    padding: .6rem;
+    color: #f5f0f0;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: .4s;
+    width: 100%;
+}
+button:hover{
+    background-color: #9600c8;
+}
+/* ===================== TITLE  ================== */
+section .title{
+    text-align: center;
+    color: #f5f0f0;
+    padding: 1.5rem 0;
+}
+/* ===================== INPUTS ================== */
+.inputs{
+    display: flex;
+    flex-direction: column;
+    row-gap: .5REM;
+    padding: .5rem 0;
+}
+.inputs .row_input{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10PX;
+}
+.inputs .row_input input{
+    width: 20%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#total{
+    background: red;
+    width: fit-content;
+    border-radius: 5px;
+    color: #f5f0f0;
+    padding: 0.3REM;
+}
+#total::before{
+    content: 'Total : ';
+}
+/* ===================== OUTPUT ================== */
+.output{
+    display: flex;
+    flex-direction: column;
+    row-gap: .5REM;
+}
+.output .row_btn{
+    display: flex;
+    gap: .5REM;
+} 
+.output .row_btn button{
+    flex-grow: 1;
+}
+table tr td{
+    background-color: #312f2f;
+    border-radius: 10px;
+}
+#tbody tr td{
+    background-color:transparent;
+}
+td{
+    text-align: center;
+    text-transform: capitalize;
+    color: #f5f0f0;
+    padding: 5px;
+}
+/* ===================== BREAKPOINTS ================== */
+/* --- xsmall and small device --- */
+@media screen and ( width <= 768px) {
+    section{
+        padding: 0.8REM;
+    }
+    input{
+        padding: 0.6REM 1.1rem;
+    }
+    .inputs .row_input input{
+        width: 100%;
+    }
+}
