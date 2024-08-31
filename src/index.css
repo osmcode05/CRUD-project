@@ -3,7 +3,8 @@
   --body-color: #222;
   --dark-color: #100;
   --white-color: #fff;
-  --dark-purple-color: #8200ad;
+  /* --dark-purple-color: #8200ad; */
+  --dark-purple-color: red;
   --light-purple-color: #ac0ae1;
 }
 * {
