@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
+        node-version: '20'
 
     - name: Install dependencies
       run: npm install
@@ -26,12 +26,11 @@ jobs:
 
     - name: Configure Git
       run: |
-        git config --global user.name "OSM"
+        git config --global user.name "Your Name"
         git config --global user.email "ousamatessla@gmail.com"
 
-    - name: Deploy
+    - name: Deploy to GitHub Pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
-        npm run deploy
+        npx gh-pages -d build -r https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
