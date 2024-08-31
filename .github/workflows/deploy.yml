@@ -24,6 +24,11 @@ jobs:
     - name: Build
       run: npm run build
 
+    - name: Configure Git
+      run: |
+        git config --global user.name "osmcode05"
+        git config --global user.email "ousamatessla@gmail.com"
+
     - name: Deploy
       run: npm run deploy
       env:
